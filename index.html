@@ -9,6 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body, .profile, .hero { background: #fff; }
+      .hero { min-height: 270px; background: #fff; }
+      .hero-lead { font: 400 clamp(26px, 3vw, 40px) / 1.15 var(--serif); letter-spacing: -0.025em; max-width: none; margin: 18px 0 0; white-space: nowrap; }
+      .company { font-size: 12px; color: var(--warm) !important; margin: 0 0 9px !important; letter-spacing: 0.02em; }
+      .employer-brand { display: inline-flex; align-items: center; gap: 10px; padding: 6px 9px; margin: 0 0 13px; background: #141c1a; color: #fff; font: 600 10px / 1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; }
+      .employer-brand img { width: 66px; height: 20px; object-fit: contain; }
+      .experience-list { border-top: 1px solid var(--ink); }
+      .experience-card { padding: 28px 0 34px; border-bottom: 1px solid var(--line); }
+      .experience-topline { display: grid; grid-template-columns: minmax(130px, 1fr) 2.4fr; gap: 28px; margin-bottom: 16px; }
+      .experience-topline > span { font: 500 21px var(--serif); color: var(--warm); }
+      .experience-content { margin-left: calc((100% - 28px) / 3.4 + 28px); }
+      .experience-content h3 { font: 500 clamp(23px, 2.6vw, 32px) / 1.1 var(--serif); letter-spacing: -0.03em; }
+      .experience-summary { max-width: 720px; margin: 17px 0 25px; color: var(--muted); font-size: 14px; }
+      .experience-work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+      .experience-work article { min-width: 0; background: var(--paper); padding: 20px; }
+      .experience-work h4 { font: 600 14px / 1.25 var(--sans); letter-spacing: -0.01em; margin: 11px 0 9px; }
+      .experience-work p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+      .experience-work.two-columns { grid-template-columns: repeat(2, 1fr); }
+      .experience-content .tag-row { margin-top: 15px; }
+      .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+      .paper-card { min-width: 0; border-top: 1px solid var(--ink); padding-top: 14px; display: flex; flex-direction: column; }
+      .paper-image { background: #e8eee8; aspect-ratio: 1.5; overflow: hidden; margin-bottom: 20px; }
+      .paper-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+      .paper-card:hover .paper-image img { transform: scale(1.025); }
+      .paper-card h3 { font: 500 clamp(19px, 2.25vw, 28px) / 1.1 var(--serif); margin: 12px 0 13px; }
+      .paper-card p { font-size: 13px; color: var(--muted); margin: 0 0 17px; }
+      .paper-card a, .paper-note { font-size: 11px; align-self: flex-start; }
+      .paper-card a { border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
+      @media (max-width: 1000px) { .research-grid { grid-template-columns: 1fr 1fr; } .paper-card:last-child { grid-column: span 2; max-width: calc(50% - 11px); } }
+      @media (max-width: 800px) { .hero { min-height: 260px; padding: 54px 28px 38px; } .hero-lead { font-size: clamp(25px, 7vw, 36px); white-space: normal; } .timeline-item, .experience-topline { grid-template-columns: 1fr; gap: 10px; } .experience-content { margin-left: 0; } .experience-work, .experience-work.two-columns, .research-grid { grid-template-columns: 1fr; } .paper-card:last-child { grid-column: auto; max-width: none; } }
+      @media (max-width: 460px) { .hero-lead { font-size: 29px; } .experience-work article { padding: 18px; } }
+    </style>
   </head>
   <body>
     <div class="site-shell">
@@ -34,7 +67,7 @@
         <header class="hero" id="top">
           <div>
             <p class="kicker" data-i18n="kicker">AI product · agent systems · urban intelligence</p>
-            <p class="hero-lead" data-i18n="heroLead">我在产品、软件和城市研究的交界处工作，关注如何让智能系统真正进入日常工作现场。</p>
+            <p class="hero-lead" data-i18n="heroLead">AI 产品、Agent 系统与城市智能。</p>
           </div>
           <a class="scroll-cue" href="#education"><span>Scroll to explore</span><b>↓</b></a>
         </header>
@@ -55,18 +88,39 @@
 
         <section class="section" id="experience">
           <div class="section-heading"><span>02</span><h2 data-i18n="experienceTitle">实习经历</h2></div>
-          <article class="feature-block experience-block">
-            <div class="feature-meta"><span>2026.02 — Present</span><span>Beijing · China</span></div>
-            <div>
-              <h3 data-i18n="internRole">AI 产品经理实习生</h3>
-              <p class="company">行至智能科技 · 行至研究院</p>
-              <p data-i18n="internIntro">面向军工大模型垂直应用，负责企业 AI 能力中台与多智能体协作 IDE 的产品设计、原型验证和核心流程落地。</p>
-              <div class="tag-row"><span>AIBase</span><span>ReAct Runtime</span><span>Skill Creator</span><span>MCP</span></div>
-            </div>
-          </article>
-          <div class="experience-grid">
-            <article><span class="mini-label">01 / AIBase</span><h3 data-i18n="aibaseTitle">企业 AI 能力中台</h3><p data-i18n="aibaseBody">设计个人资产与市场资产双库，建立 Skills / MCP Tools 的创建、发布、撤回与只读复用规则，并落地“消息 → 工具调用 → 观测 → 完成”的 ReAct 执行闭环。</p></article>
-            <article><span class="mini-label">02 / Multi-agent IDE</span><h3 data-i18n="ideTitle">多智能体协作筹划 IDE</h3><p data-i18n="ideBody">负责 Skill Creator 全流程、思维链认知协作画布和过程留痕，让领域 SOP 能沉淀为可版本化的 Agent 技能资产。</p></article>
+          <div class="experience-list">
+            <article class="experience-card">
+              <div class="experience-topline"><span>01</span><div class="feature-meta"><span data-i18n="horizonPeriod">2026.05 — 至今</span><span data-i18n="beijingLocation">北京 · 中国</span></div></div>
+              <div class="experience-content">
+                <div>
+                  <div class="employer-brand" aria-label="Horizon Robotics">
+                    <img src="assets/horizon-logo.svg" alt="Horizon Robotics logo" />
+                    <span>Horizon Robotics</span>
+                  </div>
+                  <p class="company" data-i18n="horizonCompany">北京地平线信息技术有限公司 · 地平线研究院 · 机器人实验室</p>
+                  <h3 data-i18n="horizonRole">具身智能大模型基座产品经理实习生</h3>
+                </div>
+                <p class="experience-summary" data-i18n="horizonIntro">围绕具身智能基座模型的工程化落地，将实验室分散的部署、训练、评测和真机流程梳理为可复用、可交付、可由 Agent 接手的产品化工作流。</p>
+                <div class="experience-work">
+                  <article><span class="mini-label" data-i18n="horizonWorkOneLabel">MODEL PRODUCTIZATION</span><h4 data-i18n="horizonWorkOneTitle">基座模型工程化</h4><p data-i18n="horizonWorkOneBody">围绕 RoboOrchardLab、EmbodiedGen、HoloBrain 梳理环境搭建、依赖安装、任务提交、结果验证与异常排查链路，参与 Docker 交付标准与部署路径整理。</p></article>
+                  <article><span class="mini-label" data-i18n="horizonWorkTwoLabel">DATA PRODUCTIZATION</span><h4 data-i18n="horizonWorkTwoTitle">具身数据治理</h4><p data-i18n="horizonWorkTwoBody">参与 EgoSuite-Open100K、InternData-A1 的质检平台与标注规范设计，定义 episode、subtask、动作、文本与 Pose 字段及导出 schema。</p></article>
+                  <article><span class="mini-label" data-i18n="horizonWorkThreeLabel">AGENT KNOWLEDGE</span><h4 data-i18n="horizonWorkThreeTitle">技能与问题闭环</h4><p data-i18n="horizonWorkThreeBody">将部署和训练中的高频问题沉淀为 Skill、排查清单与文档模板，降低复杂工程任务对专家经验的依赖。</p></article>
+                </div>
+                <div class="tag-row"><span>Embodied AI</span><span>Docker</span><span>Post-training</span><span>Robot deployment</span></div>
+              </div>
+            </article>
+            <article class="experience-card">
+              <div class="experience-topline"><span>02</span><div class="feature-meta"><span data-i18n="xingzhiPeriod">2026.03 — 2026.05</span><span data-i18n="beijingLocation">北京 · 中国</span></div></div>
+              <div class="experience-content">
+                <div><p class="company" data-i18n="xingzhiCompany">行至智能科技（北京）· 行至研究院</p><h3 data-i18n="internRole">AI 产品经理实习生</h3></div>
+                <p class="experience-summary" data-i18n="internIntro">面向军工大模型垂直应用，独立完成企业 AI 能力中台的产品原型设计与核心流程验证。</p>
+                <div class="experience-work two-columns">
+                  <article><span class="mini-label">01 / AIBase</span><h4 data-i18n="aibaseTitle">企业 AI 能力中台</h4><p data-i18n="aibaseBody">设计个人资产与市场资产双库，建立 Skills / MCP Tools 的创建、发布、撤回与只读复用规则，并落地“消息 → 工具调用 → 观测 → 完成”的 ReAct 执行闭环。</p></article>
+                  <article><span class="mini-label">02 / Search</span><h4 data-i18n="searchTitle">智能资源发现</h4><p data-i18n="searchBody">设计关键词检索与 LLM 语义重排序双模式资源发现，帮助企业在资产增长后仍能快速找到并准确匹配可复用的 Skills 与 Tools。</p></article>
+                </div>
+                <div class="tag-row"><span>React 19</span><span>FastAPI</span><span>ReAct Runtime</span><span>MCP</span></div>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -82,10 +136,10 @@
         <section class="section research-section" id="research">
           <div class="section-heading"><span>04</span><h2 data-i18n="researchTitle">科研</h2></div>
           <p class="section-intro" data-i18n="researchIntro">我的研究关注城市形态、空间关系与图学习之间的连接，尝试把不完整的城市证据转化为可分析、可解释的空间知识。</p>
-          <div class="research-list">
-            <article class="paper paper-featured"><div class="paper-image"><img src="assets/caadria.webp" alt="Morph-GNN architecture" loading="lazy" /></div><div class="paper-copy"><span class="paper-status">Accepted · JAABE</span><h3>Reconstructing Missing Block-Level Morphological Evidence to Support Urban Renewal-Unit Delineation</h3><p data-i18n="paperOne">提出 Morpho-GNN，在空间邻接与形态相似性的联合图结构中重建缺失的街区形态证据，为城市更新单元划定提供连续的空间依据。</p><a href="https://doi.org/10.1080/13467581.2026.2715947" target="_blank" rel="noreferrer">Publisher record ↗</a></div></article>
-            <article class="paper"><div class="paper-index">02</div><div class="paper-copy"><span class="paper-status">Accepted · CAADRIA 2026</span><h3>Urban Blocks Regionalization by Integrating Spatial Proximity and Morphological Similarity</h3><p data-i18n="paperTwo">构建双通道 Morph-GNN，同时编码空间邻接和形态相似性，在南京 4,364 个街区上生成连续且内部一致的城市形态区域。</p><a href="https://cumincad.org/cgi-bin/works/Show?caadria2026_351" target="_blank" rel="noreferrer">CUMINCAD paper page ↗</a></div></article>
-            <article class="paper"><div class="paper-index">03</div><div class="paper-copy"><span class="paper-status">Accepted · CDRF 2026</span><h3>Graph-Based Data Model for Micro-Spatial Diagnosis in Historic Urban Districts: A Case Study of Shanghai's Wukang Road District</h3><p data-i18n="paperThree">建立建筑—外部空间异质图数据模型，将形态证据与空间关系连接起来，支持历史街区的保护优先与低干预更新判断。</p><span class="paper-note">Conference paper · Shanghai</span></div></article>
+          <div class="research-grid">
+            <article class="paper-card"><div class="paper-image"><img src="assets/jaabe.jpg" alt="JAABE study figure showing spatial morphology patterns" loading="lazy" /></div><div class="paper-copy"><span class="paper-status">Accepted · JAABE</span><h3>Reconstructing Missing Block-Level Morphological Evidence to Support Urban Renewal-Unit Delineation</h3><p data-i18n="paperOne">提出 Morpho-GNN，在空间邻接与形态相似性的联合图结构中重建缺失的街区形态证据，为城市更新单元划定提供连续的空间依据。</p><a href="https://doi.org/10.1080/13467581.2026.2715947" target="_blank" rel="noreferrer">Publisher record ↗</a></div></article>
+            <article class="paper-card"><div class="paper-image"><img src="assets/caadria.webp" alt="CAADRIA Morph-GNN architecture" loading="lazy" /></div><div class="paper-copy"><span class="paper-status">Accepted · CAADRIA 2026</span><h3>Urban Blocks Regionalization by Integrating Spatial Proximity and Morphological Similarity</h3><p data-i18n="paperTwo">构建双通道 Morph-GNN，同时编码空间邻接和形态相似性，在南京 4,364 个街区上生成连续且内部一致的城市形态区域。</p><a href="https://cumincad.org/cgi-bin/works/Show?caadria2026_351" target="_blank" rel="noreferrer">CUMINCAD paper page ↗</a></div></article>
+            <article class="paper-card"><div class="paper-image"><img src="assets/cdrf.png" alt="CDRF heterogeneous graph schema" loading="lazy" /></div><div class="paper-copy"><span class="paper-status">Accepted · CDRF 2026</span><h3>Graph-Based Data Model for Micro-Spatial Diagnosis in Historic Urban Districts: A Case Study of Shanghai's Wukang Road District</h3><p data-i18n="paperThree">建立建筑—外部空间异质图数据模型，将形态证据与空间关系连接起来，支持历史街区的保护优先与低干预更新判断。</p><span class="paper-note" data-i18n="cdrfNote">Conference paper · Shanghai</span></div></article>
           </div>
         </section>
 
