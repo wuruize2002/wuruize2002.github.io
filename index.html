@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ruize Wu - AI product builder and urban computing researcher." />
+    <title>Ruize Wu | Product, Agents, Urban Computing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="profile" aria-label="Profile">
+        <div class="profile-topline"><span class="signal"></span><span data-i18n="available">Available for thoughtful work</span></div>
+        <img class="avatar" src="assets/avatar.jpg" alt="Ruize Wu" />
+        <p class="eyebrow">RUÍZÉ WU / 武睿泽</p>
+        <h1>Product thinking<br /><em>with a systems mind.</em></h1>
+        <p class="profile-copy" data-i18n="profileCopy">AI 产品经理、Agent workflow builder 与城市计算研究者。把复杂的技术能力，变成可以被使用、观察和持续迭代的工作流。</p>
+        <div class="profile-links">
+          <a href="mailto:ruize_wu@smail.nju.edu.cn"><span>↗</span> Email</a>
+          <a href="https://github.com/wuruize2002" target="_blank" rel="noreferrer"><span>↗</span> GitHub</a>
+          <a href="https://doi.org/10.1080/13467581.2026.2715947" target="_blank" rel="noreferrer"><span>↗</span> Publications</a>
+        </div>
+        <div class="profile-meta">
+          <span>Nanjing University</span>
+          <span>Nanjing, China</span>
+        </div>
+        <button class="language-toggle" type="button" id="languageToggle" aria-label="Switch language"><span class="active">中</span><span>/</span><span>EN</span></button>
+      </aside>
+
+      <main class="content">
+        <header class="hero" id="top">
+          <div>
+            <p class="kicker" data-i18n="kicker">AI product · agent systems · urban intelligence</p>
+            <p class="hero-lead" data-i18n="heroLead">我在产品、软件和城市研究的交界处工作，关注如何让智能系统真正进入日常工作现场。</p>
+          </div>
+          <a class="scroll-cue" href="#education"><span>Scroll to explore</span><b>↓</b></a>
+        </header>
+
+        <section class="section" id="education">
+          <div class="section-heading"><span>01</span><h2 data-i18n="educationTitle">教育背景</h2></div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-year">2024 — 2027</div>
+              <div><h3>Nanjing University</h3><p data-i18n="nju">数字建筑与 CAAD · 硕士研究生 · 推免</p><p class="muted" data-i18n="rankNju">Rank 2 / 7 · 南京大学城市 AI 与绿色人居营造省重点实验室</p></div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-year">2019 — 2023</div>
+              <div><h3>Hefei University of Technology</h3><p data-i18n="hfut">本科 · 建筑 / 城市与计算方向</p><p class="muted">Rank 2 / 87</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="experience">
+          <div class="section-heading"><span>02</span><h2 data-i18n="experienceTitle">实习经历</h2></div>
+          <article class="feature-block experience-block">
+            <div class="feature-meta"><span>2026.02 — Present</span><span>Beijing · China</span></div>
+            <div>
+              <h3 data-i18n="internRole">AI 产品经理实习生</h3>
+              <p class="company">行至智能科技 · 行至研究院</p>
+              <p data-i18n="internIntro">面向军工大模型垂直应用，负责企业 AI 能力中台与多智能体协作 IDE 的产品设计、原型验证和核心流程落地。</p>
+              <div class="tag-row"><span>AIBase</span><span>ReAct Runtime</span><span>Skill Creator</span><span>MCP</span></div>
+            </div>
+          </article>
+          <div class="experience-grid">
+            <article><span class="mini-label">01 / AIBase</span><h3 data-i18n="aibaseTitle">企业 AI 能力中台</h3><p data-i18n="aibaseBody">设计个人资产与市场资产双库，建立 Skills / MCP Tools 的创建、发布、撤回与只读复用规则，并落地“消息 → 工具调用 → 观测 → 完成”的 ReAct 执行闭环。</p></article>
+            <article><span class="mini-label">02 / Multi-agent IDE</span><h3 data-i18n="ideTitle">多智能体协作筹划 IDE</h3><p data-i18n="ideBody">负责 Skill Creator 全流程、思维链认知协作画布和过程留痕，让领域 SOP 能沉淀为可版本化的 Agent 技能资产。</p></article>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading"><span>03</span><h2 data-i18n="projectsTitle">项目经历</h2></div>
+          <article class="project-card">
+            <div class="project-visual"><div class="terminal-window"><div class="terminal-bar"><i></i><i></i><i></i><span>zync / workspace overview</span></div><div class="terminal-body"><div class="terminal-line"><b>01</b><span class="green">● running</span><strong>feature-layout</strong><small>claude</small></div><div class="terminal-line"><b>02</b><span class="yellow">● waiting</span><strong>snapshot-flow</strong><small>codex</small></div><div class="terminal-line"><b>03</b><span class="blue">● ready</span><strong>research-agent</strong><small>terminal</small></div><div class="terminal-prompt">$ <span>zync switch --workspace 02</span><em>▌</em></div></div></div></div>
+            <div class="project-copy"><div class="feature-meta"><span>Open-source contribution</span><span>Electron · React · TypeScript</span></div><h3>Zync</h3><p class="project-subtitle" data-i18n="zyncSubtitle">面向多 Agent 并行开发的桌面编排与治理工作台</p><p data-i18n="zyncBody">我参与产品设计与前端核心功能开发，把多个 Claude Code / Codex CLI 工作位组织成可切换、可观察、可恢复的 tmux-like 工作流。</p><div class="project-links"><a href="https://github.com/wuruize2002/Zync" target="_blank" rel="noreferrer">My fork ↗</a><a href="https://github.com/24kchengYe/Zync" target="_blank" rel="noreferrer">Upstream ↗</a></div></div>
+          </article>
+          <div class="project-notes"><span>Session + Worktree</span><span>Human-in-the-loop</span><span>Panel system</span><span>Workspace snapshots</span></div>
+        </section>
+
+        <section class="section research-section" id="research">
+          <div class="section-heading"><span>04</span><h2 data-i18n="researchTitle">科研</h2></div>
+          <p class="section-intro" data-i18n="researchIntro">我的研究关注城市形态、空间关系与图学习之间的连接，尝试把不完整的城市证据转化为可分析、可解释的空间知识。</p>
+          <div class="research-list">
+            <article class="paper paper-featured"><div class="paper-image"><img src="assets/caadria.webp" alt="Morph-GNN architecture" loading="lazy" /></div><div class="paper-copy"><span class="paper-status">Accepted · JAABE</span><h3>Reconstructing Missing Block-Level Morphological Evidence to Support Urban Renewal-Unit Delineation</h3><p data-i18n="paperOne">提出 Morpho-GNN，在空间邻接与形态相似性的联合图结构中重建缺失的街区形态证据，为城市更新单元划定提供连续的空间依据。</p><a href="https://doi.org/10.1080/13467581.2026.2715947" target="_blank" rel="noreferrer">Publisher record ↗</a></div></article>
+            <article class="paper"><div class="paper-index">02</div><div class="paper-copy"><span class="paper-status">Accepted · CAADRIA 2026</span><h3>Urban Blocks Regionalization by Integrating Spatial Proximity and Morphological Similarity</h3><p data-i18n="paperTwo">构建双通道 Morph-GNN，同时编码空间邻接和形态相似性，在南京 4,364 个街区上生成连续且内部一致的城市形态区域。</p><a href="https://cumincad.org/cgi-bin/works/Show?caadria2026_351" target="_blank" rel="noreferrer">CUMINCAD paper page ↗</a></div></article>
+            <article class="paper"><div class="paper-index">03</div><div class="paper-copy"><span class="paper-status">Accepted · CDRF 2026</span><h3>Graph-Based Data Model for Micro-Spatial Diagnosis in Historic Urban Districts: A Case Study of Shanghai's Wukang Road District</h3><p data-i18n="paperThree">建立建筑—外部空间异质图数据模型，将形态证据与空间关系连接起来，支持历史街区的保护优先与低干预更新判断。</p><span class="paper-note">Conference paper · Shanghai</span></div></article>
+          </div>
+        </section>
+
+        <footer class="footer"><span>© 2026 Ruize Wu</span><span>Built with curiosity and care.</span><a href="#top">Back to top ↑</a></footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
